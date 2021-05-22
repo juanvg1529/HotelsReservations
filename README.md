@@ -1,2 +1,2 @@
-# HotelsReservations
+# ReservationHotels
 Created with CodeSandbox
