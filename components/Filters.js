@@ -1,4 +1,10 @@
-function Filters() {
+import React from "react";
+
+function Filters(props) {
+  const handleSize = () => {
+    props.handleSize(props.handleHotelroom);
+  };
+
   return (
     <div className="filters-styles">
       <div className="Dates">
@@ -8,10 +14,10 @@ function Filters() {
       </div>
       <div className="selects">
         <select name="categories" id="Countries">
-          <option value="organizacion">--Choose a country---</option>
-          <option value="negocio">Argentina</option>
-          <option value="salud">Brazil</option>
-          <option value="estudios">Chile</option>
+          <option value="allCountries">--Choose a country---</option>
+          <option value="argentina">Argentina</option>
+          <option value="brazil">Brazil</option>
+          <option value="chile">Chile</option>
         </select>
         <select name="categories" id="Cost-room">
           <option value="organizacion">--Choose a cost--</option>
@@ -20,11 +26,16 @@ function Filters() {
           <option value="salud">high cost($$$)</option>
           <option value="estudios">Premium($$$$)</option>
         </select>
-        <select name="categories" id="number-of-bedrooms">
-          <option value="organizacion">--Choose a hotel--</option>
-          <option value="organizacion">Little hotel</option>
-          <option value="negocio">Medium hotel</option>
-          <option value="salud">big hotel </option>
+        <select
+          name="categories"
+          id="number-of-bedrooms"
+          onChange={handleSize}
+          value={props.filterSizeRoom}
+        >
+          <option value="allHotels">--Choose a hotel--</option>
+          <option value="littleHotel">Little hotel</option>
+          <option value="mediumHotel">Medium hotel</option>
+          <option value="bigHotel">big hotel </option>
         </select>
         <button className="reset-button"> RESET</button>
       </div>

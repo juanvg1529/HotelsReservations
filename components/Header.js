@@ -6,7 +6,7 @@ function Header() {
       </div>
 
       <div className="paragraph-shedule">
-        <p> Text to put the schedule </p>
+        <p> Text to put the hotel dates </p>
       </div>
     </div>
   );

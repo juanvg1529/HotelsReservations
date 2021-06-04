@@ -5,6 +5,7 @@
 const today = new Date();
 const hotelsData = [
   {
+    id: 1,
     slug: "la-bamba-de-areco",
     name: "La Bamba de Areco",
     photo: "https://i.imgur.com/k99hAlJ.jpg",
@@ -18,6 +19,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 2,
     slug: "sainte-jeanne",
     name: "Sainte Jeanne Boutique & Spa",
     photo: "https://i.imgur.com/M5KDHrO.jpeg",
@@ -31,6 +33,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 3,
     slug: "entre-cielos",
     name: "Entre Cielos",
     photo: "https://i.imgur.com/OvLWzfl.jpg",
@@ -44,6 +47,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 4,
     slug: "huacalera",
     name: "Hotel Huacalera",
     photo: "https://i.imgur.com/l632poR.jpg",
@@ -57,6 +61,7 @@ const hotelsData = [
     price: 1
   },
   {
+    id: 5,
     slug: "merced-del-alto",
     name: "La Merced del Alto",
     photo: "https://i.imgur.com/wZTQ85l.jpg",
@@ -70,6 +75,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 6,
     slug: "azur-real",
     name: "Azur Real Hotel",
     photo: "https://i.imgur.com/jnG9NzQ.jpg",
@@ -83,6 +89,7 @@ const hotelsData = [
     price: 1
   },
   {
+    id: 7,
     slug: "rincon-del-socorro",
     name: "Rincón del Socorro",
     photo: "https://i.imgur.com/SQOQI0F.jpg",
@@ -96,6 +103,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 8,
     slug: "luma-casa-de-montana",
     name: "Luma Casa de Montaña",
     photo: "https://i.imgur.com/SQOQI0F.jpeg",
@@ -109,6 +117,7 @@ const hotelsData = [
     price: 2
   },
   {
+    id: 9,
     slug: "casa-turquesa",
     name: "Casa Turquesa",
     photo: "https://i.imgur.com/R2uIK03.jpg",
@@ -122,6 +131,7 @@ const hotelsData = [
     price: 3
   },
   {
+    id: 10,
     slug: "vila-da-santa",
     name: "Vila Da Santa",
     photo: "https://i.imgur.com/NZrNDYX.jpg",
@@ -135,6 +145,7 @@ const hotelsData = [
     price: 3
   },
   {
+    id: 11,
     slug: "uxua-casa",
     name: "UXUA Casa Hotel & Spa",
     photo: "https://i.imgur.com/ZpVzjYk.jpg",
@@ -148,6 +159,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 12,
     slug: "ponta-dos-ganchos",
     name: "Ponta dos Ganchos",
     photo: "https://i.imgur.com/xUcclME.jpg",
@@ -161,6 +173,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 13,
     slug: "alto-atacama",
     name: "Alto Atacama",
     photo: "https://i.imgur.com/SLRjbuQ.jpg",
@@ -174,6 +187,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 14,
     slug: "tierra-patagonia",
     name: "Tierra Patagonia",
     photo: "https://i.imgur.com/nh9qcRB.jpeg",
@@ -187,6 +201,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 15,
     slug: "vira-vira",
     name: "Vira Vira",
     photo: "https://i.imgur.com/4z3mARb.jpeg",
@@ -200,6 +215,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 16,
     slug: "vik-chile",
     name: "Vik Chile",
     photo: "https://i.imgur.com/duuVhHk.jpg",
@@ -213,6 +229,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 17,
     slug: "casa-higueras",
     name: "Casa Higueras",
     photo: "https://i.imgur.com/rWwVBoS.jpeg",
@@ -226,6 +243,7 @@ const hotelsData = [
     price: 4
   },
   {
+    id: 18,
     slug: "campo-tinto",
     name: "Campo Tinto",
     photo: "https://i.imgur.com/vbqs0oh.jpg",
@@ -239,5 +257,11 @@ const hotelsData = [
     price: 1
   }
 ];
-
-export { hotelsData };
+const initialStates = [
+  {
+    country: "--Choose a country---",
+    cost: "--Chose a cost---",
+    sizeRoom: "--Choose a size"
+  }
+];
+export { hotelsData, initialStates };
