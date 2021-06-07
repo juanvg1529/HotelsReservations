@@ -1,9 +1,10 @@
 import React from "react";
+import { initalStates } from "../data/data";
 
 function Filters(props) {
-  const handleSize = () => {
-    props.handleSize(props.handleHotelroom);
-  };
+  // const handleSize = () => {
+  //   props.handleSize(props.handleHotelroom);
+  // };
 
   return (
     <div className="filters-styles">
@@ -14,26 +15,26 @@ function Filters(props) {
       </div>
       <div className="selects">
         <select name="categories" id="Countries">
-          <option value="allCountries">--Choose a country---</option>
+          <option value={initalStates}>{initalStates}</option>
           <option value="argentina">Argentina</option>
           <option value="brazil">Brazil</option>
           <option value="chile">Chile</option>
         </select>
         <select name="categories" id="Cost-room">
-          <option value="organizacion">--Choose a cost--</option>
-          <option value="organizacion">low cost ($)</option>
-          <option value="negocio">medium cost($$)</option>
-          <option value="salud">high cost($$$)</option>
-          <option value="estudios">Premium($$$$)</option>
+          <option value={props.initalStates}>{props.initalStates}</option>
+          <option value="lowCost">low cost ($)</option>
+          <option value="mediumCost">medium cost($$)</option>
+          <option value="highCost">high cost($$$)</option>
+          <option value="Premium">Premium($$$$)</option>
         </select>
         <select
           name="categories"
           id="number-of-bedrooms"
-          onChange={handleSize}
+          onChange={props.handleHotelroom}
           value={props.filterSizeRoom}
         >
-          <option value="allHotels">--Choose a hotel--</option>
-          <option value="littleHotel">Little hotel</option>
+          <option value={props.sizeRoom}>{props.sizeRoom}</option>
+          <option value={props.rooms}>Little hotel</option>
           <option value="mediumHotel">Medium hotel</option>
           <option value="bigHotel">big hotel </option>
         </select>
