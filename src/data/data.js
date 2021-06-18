@@ -257,11 +257,5 @@ const hotelsData = [
     price: 1
   }
 ];
-const initialStates = [
-  {
-    country: "--Choose a country---",
-    cost: "--Chose a cost---",
-    sizeRoom: "--Choose a size"
-  }
-];
-export { hotelsData, initialStates };
+
+export { hotelsData };
