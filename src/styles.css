@@ -16,32 +16,33 @@
 /*Header styles*/
 .Header-hotels {
   width: 100%;
-  background: linear-gradient(#c0f5f4, #808b65);
+  background: rgb(93, 233, 168);
   display: flex;
   flex-direction: column;
   align-items: start;
 }
 .title h1 {
   margin-left: 2rem;
-  color: rgb(241, 151, 151);
+  color: rgb(248, 9, 9);
   font-family: porcelain;
 }
 .paragraph-shedule {
   margin-left: 2rem;
-  color: rgb(207, 95, 104);
+  color: rgb(19, 16, 17);
 }
 
 /*Filters-styles*/
 .filters-styles {
   width: 100%;
-  height: 4rem;
-  background: linear-gradient(rgb(255, 255, 255), rgb(167, 189, 188));
+  height: 2.5rem;
+  background: rgb(139, 139, 241);
+
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 2px 1px rgb(29, 20, 27);
+  box-shadow: 2px 2px 2px 1px rgb(114, 116, 124);
   width: 60rem;
-  border-radius: 50px;
+  border-radius: 10px;
   z-index: 1;
   position: relative;
   top: 1rem;
@@ -55,7 +56,7 @@
   height: 1.6rem;
   border-radius: 5px;
   border: none;
-  box-shadow: 2px 2px 2px 1px rgb(214, 149, 203);
+  box-shadow: 2px 2px 2px 1px rgb(58, 61, 71);
   margin-right: 1rem;
   cursor: pointer;
 }
@@ -70,7 +71,6 @@
   height: 1.6rem;
   border-radius: 5px;
   border: none;
-  box-shadow: 2px 2px 2px 1px rgb(214, 149, 203);
 }
 select option {
   cursor: pointer;
@@ -81,8 +81,8 @@ select option {
   height: 1.6rem;
   border: 20px yellow;
   border-radius: 5px;
-  background: linear-gradient(rgb(27, 235, 0), rgb(207, 88, 203));
-  box-shadow: 2px 2px 2px 1px rgb(214, 149, 203);
+  background: rgb(194, 20, 194);
+  box-shadow: 2px 2px 2px 1px rgb(58, 61, 71);
   margin-right: 1rem;
   color: white;
   font-weight: bold;
@@ -90,19 +90,18 @@ select option {
   cursor: pointer;
 }
 .reset-button:hover {
-  background: linear-gradient(rgb(241, 238, 12), rgb(83, 29, 81));
+  background: rgb(112, 218, 183);
 }
 
 /*Hotels space cards*/
 .Hotels-space-cards {
   position: relative;
-  /*  */
   margin-top: 2rem;
   display: flex;
-
+  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  height: 20rem;
   scroll-behavior: smooth;
   justify-content: center;
 }
@@ -110,74 +109,111 @@ select option {
 /* Card Hotel styles*/
 
 .Main-Card-Composition {
-  margin: 20px;
-  border: 3 px black;
-  width: 18rem;
-  height: 30rem;
-  background: linear-gradient(rgb(245, 242, 197), rgb(210, 228, 207));
-  box-shadow: 2px 2px 2px 1px hsl(179, 26%, 70%);
+  margin: 5px;
+  width: 20rem;
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px 1px hsl(180, 1%, 61%);
+
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid #bdbdbd;
+}
+
+.Hotel-name {
   display: flex;
   justify-content: center;
-  align-content: center;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 0.5rem;
-  /* align-items: center;
-  justify-items: center; */
-}
-.title-photo-hotel {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-}
-div .Hotel-name {
-  z-index: 1;
-  -webkit-text-stroke: 1.5px rgb(14, 13, 13);
-  color: rgb(246, 247, 245);
-  font-family: porcelain, sans-serif;
+  align-items: center;
   font-style: oblique;
-  /* background-color: rgba(235, 243, 243, 0.5); */
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  background-color: green;
-  height: auto;
+  font-family: porcelain, sans-serif;
+  -webkit-text-stroke: 0.8px rgb(90, 175, 136);
+  color: rgb(246, 247, 245);
+  font-size: 1rem;
+  height: 3.2rem;
 }
 .hotel-photos {
   z-index: 0;
   position: relative;
   display: flex;
-  /* bottom: 3rem; */
+  width: 100%;
 }
-div .Card-Hotel-Info {
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
 
-  justify-items: start;
+.Hotel-description {
+  width: 100%;
+
+  height: 8rem;
+}
+.Hotel-description-paragraph {
+  color: rgb(22, 21, 21);
+  font-size: 14px;
+  text-align: justify;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .Hotel-characteristics {
-  z-index: 2;
   display: flex;
-  margin: 1rem;
-  position: relative;
-
-  /* background-color: green; */
-
-  position: relative;
-}
-div .Hotel-description {
-  width: 100%;
+  justify-content: center;
+  align-content: center;
   height: 3rem;
-  display: flex;
-  align-items: start;
-  justify-items: start;
-  position: relative;
-
-  font-size: 14px;
-  /* bottom: 5rem; */
+  gap: 1rem;
 }
 .bed {
-  width: 20px;
+  width: 1.4rem;
+  margin: 0.2rem;
+  justify-content: center;
+  align-content: center;
+}
+.ubication-info + .rooms-info {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 15px;
+}
+.ubication-info {
+  margin: 0.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+.rooms-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  gap: 0.3rem;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin: 2px;
+}
+.price > span {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 1.5rem;
+  width: 4rem;
+  border: 1px solid rgb(115, 115, 211);
+  padding-top: 5px;
+}
+.Reservation-button {
+  width: 100%;
+  border: none;
+  height: 2rem;
+  background: rgb(115, 115, 211);
+  color: rgb(26, 24, 24);
+  font-size: 17px;
+  cursor: pointer;
+  font-style: border;
+}
+.Reservation-button:hover {
+  background: rgb(194, 20, 194);
 }
