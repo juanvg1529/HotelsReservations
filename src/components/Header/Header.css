@@ -1,0 +1,26 @@
+@import url("http://fonts.cdnfonts.com/css/porcelain");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
+/*Header Styles*/
+.Header-hotels {
+  width: 100%;
+  background: rgb(93, 233, 168);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+}
+.title {
+  margin-left: 2rem;
+  color: rgb(248, 9, 9);
+  font-family: "Great Vibes", cursive;
+  height: auto;
+  font-size: 2rem;
+}
+.paragraph-shedule {
+  margin-left: 2rem;
+  color: rgb(19, 16, 17);
+  font-style: oblique;
+  font-size: 1.4rem;
+  font-family: "Porcelain", sans-serif;
+}
