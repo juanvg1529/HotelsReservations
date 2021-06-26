@@ -24,44 +24,44 @@ export function Header(props) {
     function getAnyDate(M) {
       switch (M) {
         case 1:
-          return "of January";
+          return "January";
         case 2:
-          return "of February";
+          return "February";
         case 3:
-          return "of March";
+          return "March";
         case 4:
-          return "of April";
+          return "April";
         case 5:
-          return "of May";
+          return "May";
         case 6:
-          return "of June";
+          return "June";
         case 7:
-          return "of July";
+          return "July";
         case 8:
-          return "of Agost";
+          return "Agost";
         case 9:
-          return "of September";
+          return "September";
         case 10:
-          return "of October";
+          return "October";
         case 11:
-          return "of November";
+          return "November";
         case 12:
-          return "of December";
+          return "December";
         default:
           return null;
       }
     }
 
     if (props.dateFrom.length > 2) {
-      messageInitial.dateFromInitial = `${dayFrom} ${getAnyDate(
+      messageInitial.dateFromInitial = `${getAnyDate(
         MonthFrom
-      )} ${yearFrom}`;
+      )} ${dayFrom} of ${yearFrom}`;
       messageInitial.dateToInitial = ",";
 
       if (props.dateTo.length > 2) {
-        messageInitial.dateToInitial = `${dayTo} ${getAnyDate(
+        messageInitial.dateToInitial = ` ${getAnyDate(
           MonthTo
-        )} ${yearTo}`;
+        )} ${dayTo} of ${yearTo}`;
         messageReturned = `${messageInitial.dateFromInitial} To ${messageInitial.dateToInitial}, ${messageInitial.countryInitial}, ${messageInitial.priceInitial}, ${messageInitial.roomsInitial}.`;
       }
     } else {
