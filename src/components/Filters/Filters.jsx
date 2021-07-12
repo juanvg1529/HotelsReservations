@@ -1,10 +1,15 @@
 import React from "react";
 import "../../Styles/Filters.css";
-import { Dates } from "./FilterComponents/Dates";
+import { DatesComponent } from "./FilterComponents/DatesComponent";
+import CountriesComponent from "./FilterComponents/CountriesComponent";
+import CostComponent from "./FilterComponents/CostComponent";
+import RoomsComponent from "./FilterComponents/RoomsComponent";
+import ButtonReset from "./FilterComponents/ButtonReset";
+
 export function Filters(props) {
   return (
     <form className="filters-styles">
-      <Dates
+      <DatesComponent
         valueDayBefore={props.dayBefore}
         onChangeDayBefore={props.onChangeDatesBefore}
         valueDayAfter={props.dayAfter}
@@ -12,53 +17,22 @@ export function Filters(props) {
       />
 
       <div className="selects">
-        <select
-          name="categories"
-          id="Countries"
-          value={props.countryF}
-          onChange={props.onChangeCountry}
-        >
-          <option value={props.initialStateCountry}>
-            {props.initialStateCountry}
-          </option>
-          <option value="Argentina">Argentina</option>
-          <option value="Brasil">Brazil</option>
-          <option value="Chile">Chile</option>
-          <option value="Uruguay">Uruguay</option>
-        </select>
-
-        <select
-          name="categories"
-          id="Cost-room"
-          value={props.priceF}
+        <CountriesComponent
+          valueCountry={props.countryF}
+          onChangeCoountryComponent={props.onChangeCountry}
+          initialState={props.initialStateCountry}
+        />
+        <CostComponent
+          valueCost={props.priceF}
           onChange={props.onChangePrice}
-        >
-          <option value={props.initialStatePrice}>
-            {props.initialStatePrice}
-          </option>
-          <option value="lowCost">low cost ($)</option>
-          <option value="mediumCost">medium cost($$)</option>
-          <option value="highCost">high cost($$$)</option>
-          <option value="Premium">Premium($$$$)</option>
-        </select>
-        <select
-          name="categories"
-          id="number-of-bedrooms"
-          value={props.roomsF}
+          initialState={props.initialStatePrice}
+        />
+        <RoomsComponent
+          valueRooms={props.roomsF}
           onChange={props.onChangeRooms}
-        >
-          <option value={props.initialStateRooms}>
-            {props.initialStateRooms}
-          </option>
-          <option value="littleHotel">Little hotel</option>
-          <option value="mediumHotel">Medium hotel</option>
-          <option value="bigHotel">big hotel </option>
-        </select>
-
-        <button onClick={props.resetF} className="reset-button">
-          {" "}
-          RESET
-        </button>
+          initialState={props.initialStateRooms}
+        />
+        <ButtonReset onClick={props.resetF} />
       </div>
     </form>
   );

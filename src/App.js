@@ -51,6 +51,7 @@ export default function App() {
     setDatesBefore(initialStates.datesState);
     setDatesAfter(initialStates.datesState);
   };
+
   const dateFrom = new Date(datesBefore).getTime(); //first date
   const dateTo = new Date(datesAfter).getTime(); //second date
 

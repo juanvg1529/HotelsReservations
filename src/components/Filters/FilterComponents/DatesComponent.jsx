@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Dates = (props) => {
+export const DatesComponent = (props) => {
   return (
     <div className="Dates">
       <input
