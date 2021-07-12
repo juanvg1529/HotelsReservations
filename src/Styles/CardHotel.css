@@ -79,46 +79,7 @@
   gap: 0.3rem;
 }
 /*styles of the price*/
-.price {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 2rem;
-  margin: 2px;
-}
-.price > span {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  height: 1.5rem;
-  width: 4rem;
-  padding-top: 5px;
-  border: none;
-}
-.Price-Style > span {
-  display: flex;
-  justify-content: center;
-}
-.Price-Style {
-  width: 4rem;
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  border: none;
-  -webkit-text-stroke: 0.8px rgb(115, 226, 139);
-}
-.priceStyleRegular {
-  display: flex;
-  justify-content: center;
-  font-weight: bold;
-}
-.priceStyleRegular-itsOFF {
-  -webkit-text-stroke: 0.8px rgb(242, 250, 242);
-  margin-left: 4.05px;
-}
+
 .Reservation-button {
   width: 100%;
   border: none;

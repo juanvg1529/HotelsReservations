@@ -1,21 +1,16 @@
 import React from "react";
-import "./Filters.css";
+import "../../Styles/Filters.css";
+import { Dates } from "./FilterComponents/Dates";
 export function Filters(props) {
   return (
-    <div className="filters-styles">
-      <div className="Dates">
-        <input
-          type="date"
-          value={props.dayBefore}
-          onChange={props.onChangeDatesBefore}
-        />
+    <form className="filters-styles">
+      <Dates
+        valueDayBefore={props.dayBefore}
+        onChangeDayBefore={props.onChangeDatesBefore}
+        valueDayAfter={props.dayAfter}
+        onChangeDayAfter={props.onChangeDateAfter}
+      />
 
-        <input
-          type="date"
-          value={props.dayAfter}
-          onChange={props.onChangeDateAfter}
-        />
-      </div>
       <div className="selects">
         <select
           name="categories"
@@ -59,11 +54,12 @@ export function Filters(props) {
           <option value="mediumHotel">Medium hotel</option>
           <option value="bigHotel">big hotel </option>
         </select>
+
         <button onClick={props.resetF} className="reset-button">
           {" "}
           RESET
         </button>
       </div>
-    </div>
+    </form>
   );
 }

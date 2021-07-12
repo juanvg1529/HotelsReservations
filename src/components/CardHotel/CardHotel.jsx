@@ -1,33 +1,8 @@
 import React from "react";
 
-import "./CardHotel.css";
-
-const showPrice = (Price) => {
-  if (Price === 1) {
-    return (
-      <p className="priceStyleRegular">
-        $ <span className="priceStyleRegular-itsOFF"> $ $ $ </span>
-      </p>
-    );
-  }
-
-  if (Price === 2) {
-    return (
-      <p className="priceStyleRegular">
-        $ $ <span className="priceStyleRegular-itsOFF"> $ $ </span>
-      </p>
-    );
-  }
-  if (Price === 3) {
-    return (
-      <p className="priceStyleRegular">
-        $ $ $ <span className="priceStyleRegular-itsOFF"> $ </span>
-      </p>
-    );
-  } else {
-    return <p className="priceStyleRegular">$ $ $ $ </p>;
-  }
-};
+import "../../Styles/CardHotel.css";
+import "../../Styles/Prices.css";
+import { showPrice } from "./showPrice";
 
 export function CardHotel(props) {
   return (

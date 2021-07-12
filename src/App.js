@@ -1,7 +1,8 @@
-import "./styles.css";
+import "./Styles/styles.css";
 import React, { useState } from "react";
 import Header from "../src/components/Header/Header";
 import { Filters } from "./components/Filters/Filters";
+import { newfilteredList } from "./components/Filters/functions/newFilteredList";
 import { CardHotel } from "../src/components/CardHotel/CardHotel";
 import { hotelsData, initialStates } from "../public/data/data";
 
@@ -18,7 +19,7 @@ export default function App() {
   //initial state of the date of availability To
   const [datesAfter, setDatesAfter] = useState(initialStates.datesState);
 
-  /**
+  /* *
    * Event Handlers
    */
   //event handler for countries
@@ -61,80 +62,23 @@ export default function App() {
       alert(dateMessage);
     }
   }
-  // /**
-  //  * filters
-  //  */
 
-  const NewfilteredList = (props, dateFrom, dateTo) => {
-    const nuevaLista = hotelsData
-      .filter((parameter) => {
-        //filter of the dates
-        const dateFrom = new Date(datesBefore).getTime(); //first date
-        const dateTo = new Date(datesAfter).getTime(); //second date
+  let filteredList = newfilteredList(
+    hotelsData,
+    dateFrom,
+    dateTo,
+    datesAfter,
+    datesBefore,
+    setDatesAfter,
+    setDatesBefore,
+    country,
+    price,
+    rooms,
+    initialStates.countryState,
+    initialStates.priceState,
+    initialStates.roomsState
+  );
 
-        if (datesBefore <= 0 && datesAfter <= 0) {
-          return parameter;
-        }
-        if (datesBefore && datesAfter) {
-          if (datesBefore <= datesAfter) {
-            const hotelDates =
-              dateFrom <= parameter.availabilityTo &&
-              dateTo >= parameter.availabilityFrom;
-            return hotelDates;
-          } else {
-            setDatesAfter("");
-            setDatesBefore("");
-          }
-        }
-        return parameter;
-      })
-
-      .filter((parameter) => {
-        //filter of the countries
-
-        if (country === initialStates.countryState) {
-          return parameter;
-        }
-        if (country !== initialStates.countryState) {
-          return parameter.country === country;
-        }
-        return parameter;
-      })
-      .filter((parameter) => {
-        //filter of the prices
-
-        let roomCost = 0;
-        if (price !== initialStates.priceState) {
-          if (price === "lowCost") {
-            roomCost = 1;
-          } else if (price === "mediumCost") {
-            roomCost = 2;
-          } else if (price === "highCost") {
-            roomCost = 3;
-          } else if (price === "Premium") {
-            roomCost = 4;
-          }
-          return parameter.price === roomCost;
-        }
-        return parameter;
-      })
-
-      .filter((parameter) => {
-        //filter of the rooms
-        if (rooms === initialStates.roomsState) {
-          return parameter;
-        } else if (rooms === "littleHotel") {
-          return parameter.rooms <= 10;
-        } else if (rooms === "mediumHotel") {
-          return parameter.rooms >= 10 && parameter.rooms <= 20;
-        } else if (rooms === "bigHotel") {
-          return parameter.rooms > 20;
-        }
-        return parameter;
-      });
-    return nuevaLista;
-  };
-  let filteredList = NewfilteredList(dateFrom, dateTo);
   dateAlert(dateFrom, dateTo); //here I called the Alert function
 
   return (
@@ -151,7 +95,7 @@ export default function App() {
         dayBefore={datesBefore}
         setDatesBeforeF={setDatesBefore}
         onChangeDatesBefore={handleClickDateBefore}
-        dayAfter={datesAfter}
+        dayTo={datesAfter}
         setDatesAfterF={setDatesAfter}
         onChangeDateAfter={handleClickDateAFter}
         countryF={country}
